@@ -20,24 +20,24 @@ include_once __DIR__ . '/config.php';
 <nav class="bg-white dark:bg-gray-800 shadow-md px-6 py-4 flex justify-between items-center transition duration-300">
   <div class="text-2xl font-bold text-blue-600 dark:text-white">JobTracker</div>
   <div class="flex items-center space-x-6">
-    <a href="<?= BASE_URL ?>/home.php" class="text-blue-600 dark:text-white font-medium hover:text-blue-400">Home</a>
-    <a href="<?= BASE_URL ?>/about.php" class="hover:text-blue-500 dark:text-white">About</a>
-    <a href="<?= BASE_URL ?>/contact.php" class="hover:text-blue-500 dark:text-white">Contact</a>
+    <a href="home.php" class="text-blue-600 dark:text-white font-medium hover:text-blue-400">Home</a>
+    <a href="about.php" class="hover:text-blue-500 dark:text-white">About</a>
+    <a href="contact.php" class="hover:text-blue-500 dark:text-white">Contact</a>
 
     <?php if (isset($_SESSION['username'])): ?>
-      <a href="<?= BASE_URL ?>/profile.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
+      <a href="profile.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
         <i class="fas fa-user-circle mr-2"></i> Profile
       </a>
       <?php if ($_SESSION['role'] === 'admin'): ?>
-        <a href="<?= BASE_URL ?>/admin.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
+        <a href="admin.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
           <i class="fas fa-cogs mr-2"></i> Admin Panel
         </a>
       <?php endif; ?>
-      <a href="<?= BASE_URL ?>/logout.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
+      <a href="logout.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
         <i class="fas fa-sign-out-alt mr-2"></i> Logout
       </a>
     <?php else: ?>
-      <a href="<?= BASE_URL ?>/login-signup.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
+      <a href="login-signup.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
         <i class="fas fa-sign-in-alt mr-2"></i> Login/Sign Up
       </a>
     <?php endif; ?>

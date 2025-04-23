@@ -23,7 +23,7 @@ include_once __DIR__ . '/header.php'; // Assuming your navbar is in header.php
       </ul>
     </div>
     <div>
-      <img src="assets/images/about-illustration.svg" alt="About Illustration" class="rounded-xl shadow-lg">
+      <img src="logo.png" alt="About Illustration" class="rounded-xl shadow-lg">
     </div>
   </div>
 </section>
