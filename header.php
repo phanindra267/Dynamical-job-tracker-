@@ -29,7 +29,7 @@ include_once __DIR__ . '/config.php';
         <i class="fas fa-user-circle mr-2"></i> Profile
       </a>
       <?php if ($_SESSION['role'] === 'admin'): ?>
-        <a href="admin.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
+        <a href="admin/admin.php" class="flex items-center text-blue-600 dark:text-white hover:text-blue-400">
           <i class="fas fa-cogs mr-2"></i> Admin Panel
         </a>
       <?php endif; ?>

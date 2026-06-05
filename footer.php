@@ -1,6 +1,6 @@
 <script>
   function toggleTheme() {
-    const isDark = document.body.classList.toggle('dark');
+    const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     document.getElementById('themeToggle').innerHTML = isDark
       ? '<i class="fas fa-sun"></i>'
@@ -10,7 +10,7 @@
   window.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme') || (new Date().getHours() >= 18 || new Date().getHours() <= 6 ? 'dark' : 'light');
     if (theme === 'dark') {
-      document.body.classList.add('dark');
+      document.documentElement.classList.add('dark');
       document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
     } else {
       document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i>';

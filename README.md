@@ -1,140 +1,84 @@
-💼 Job Tracker –
-Streamlining Recruitment, Simplifying Careers
-Job Tracker is a fully dynamic and feature-rich web application designed to simplify and organize the job application and recruitment process. Built as a collaborative project, it offers a seamless experience for both Applicants and Recruiters through a dual-role architecture.
+# 💼 JobTracker - Smart ATS & AI-Powered Career Hub
 
-🔍 Live preview coming soon — full deployment will be browser-accessible across all devices!
+JobTracker is a modern, dynamic web application designed to simplify and automate recruitment pipelines. Built with PHP, MySQL, and Tailwind CSS, it offers candidates personalized vacancies matching their skills, provides recruiters with inline status controls, and utilizes local NLP algorithms to calculate ATS candidate match scores.
 
-🧭 Platform Overview
-👥 Applicant Interface
-Authentication System
-New users can register easily, while returning users can log in securely.
+---
 
-Job Browsing & Filtering
-View an extensive list of job opportunities filtered by category (e.g., Marketing, Software Development).
+## 🚀 Key Features
 
-Application Submission
-Submit applications for any job by uploading your resume and filling out basic details.
+### 🧠 1. Local AI ATS Candidate Matcher
+- **Zero Latency Evaluation**: Parses candidate resumes and cover letters locally during submission to compute a **Match Score (0-100%)** against job description text and required skills.
+- **Scoring Breakdown**:
+  - **Skills Overlap (60%)**: Measures intersection of candidate attributes and required tools.
+  - **Keyword Trigger Density (40%)**: Evaluates professional modifiers (e.g., *develop, analyze, manage, lead*).
+- **Recruiter Filter**: Piles of applications are instantly sortable and color-coded by match percentage.
 
-Profile Dashboard
-View and update your personal information, resume, and application history.
+### ✨ 2. Personalization & User Portals
+- **Dynamic Recommended Jobs**: Candidates receive a **"Recommended for You"** job drawer listing jobs that fit their background, complete with fit percentages.
+- **Timelines & Status History**: Dynamic candidate tracking pages replace hardcoded mock tables to display actual real-time application updates.
+- **AI Cover Letter Copilot**: Integrated writing assistant drafts custom application cover letters instantly using job requirements.
 
-Contact Support
-A "Get in Touch" page allows users to reach out for inquiries or feedback.
+### 🤖 3. JobTracker AI Agent
+- An offline, interactive floating chatbot assistant on the homepage.
+- Answers FAQs, lists active vacancies, and informs candidates of their application status.
 
-🧑‍💼 Recruiter/Admin Interface
-Secure Recruiter Login
-Access the system using recruiter credentials for administrative privileges.
+### 📊 4. Analytical Admin Dashboards
+- **Recruitment Pipeline Breakdown**: Real-time status distribution metrics visually drawn via Chart.js.
+- **Activity Stream**: Interactive feed showing recent application submissions.
+- **Dynamic Action Board**: Inline controls to transition applicants between `Pending`, `Reviewing`, `Shortlisted`, and `Rejected` statuses.
 
-Admin Panel Features:
+---
 
-📊 Dashboard Overview
-Visual stats: total applicants, total applications, etc.
+## 🛠️ Project Structure & Architecture
 
-👤 User Management
-View and manage registered users and all submitted applications.
+```text
+├── admin/
+│   ├── admin.php               # Admin/Recruiter insights console
+│   ├── job-applications.php    # Application status pipeline manager
+│   ├── manage-users.php        # User access list
+│   └── settings.php            # Platform settings
+├── uploads/                    # Stores uploaded resumes (PDF/DOCX)
+├── apply.php                   # Job application page & AI matcher
+├── db.php                      # Database connectivity configuration
+├── home.php                    # Landing page, recommendations & chatbot
+├── profile.php                 # Candidate profile & submission logs
+└── job_tracker.sql             # Full database initialization script
+```
 
-🧾 Job Management
-Post, edit, or remove job listings as needed.
+---
 
-📩 Message Center
-Review and respond to messages from applicants.
+## 🚀 Getting Started
 
-🎯 Application Control
-Approve, reject, or hold applications with advanced filters.
+Follow these steps to run the JobTracker project locally using XAMPP or local Apache/MySQL stacks:
 
-⚙️ Tech Stack
+### 1. Prerequisites
+- **Web Server**: XAMPP, WAMP, or any Apache + PHP + MySQL stack.
+- **PHP Version**: PHP 7.4 or higher recommended.
+- **MySQL**: MySQL 5.7 or higher.
 
-Component	Technology Used
-Frontend	HTML5, CSS3, Tailwind CSS, JavaScript
-Backend	PHP
-Database	MySQL
-Server	XAMPP (Apache + MySQL)
-Built with clean architecture, scalability, and real-world usability in mind.
+### 2. Set Up the Project
+Move the cloned project folder into your server's public root directory (e.g., `C:\xampp\htdocs\job-tracker`).
 
-📁 Features at a Glance
-Dual-role access: Applicant & Recruiter
+### 3. Database Setup
+1. Open the MySQL control panel (e.g., visit `http://localhost/phpmyadmin`).
+2. Create a new database named `job_tracker`.
+3. Import the `job_tracker.sql` file located in the root of the project folder.
 
-Dynamic resume management and job tracking
-
-Responsive and modern UI using Tailwind CSS
-
-Robust admin dashboard with full control
-
-Secure and scalable backend operations
-
-📌 How to Use
-Follow these steps to run the Job Tracker project locally using XAMPP:
-
-🛠️ Prerequisites
-XAMPP (Apache + MySQL)
-
-Git (optional, for cloning)
-
-A modern web browser (Chrome, Firefox, etc.)
-
-🚀 Setup Instructions
-Clone the Repository
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/job-tracker.git
-Move Project to XAMPP Directory
-
-Move the folder into your XAMPP htdocs directory:
-
-makefile
-Copy
-Edit
-C:\xampp\htdocs\job-tracker
-Start XAMPP
-
-Open XAMPP Control Panel
-
-Start Apache and MySQL
-
-Database Setup
-
-Visit http://localhost/phpmyadmin
-
-Create a new database (e.g., job_tracker)
-
-Import the job_tracker.sql file (from the project folder)
-
-Run the Project
-
+### 4. Run the Project
 Navigate to the application in your browser:
-
-arduino
-Copy
-Edit
+```text
 http://localhost/job-tracker/home.php
-✅ Done! You're now ready to explore and use the full functionality of Job Tracker.
+```
 
-📸 Screenshots (Optional)
-You can add screenshots here to showcase the UI of both Applicant and Admin dashboards.
-![Screenshot 2025-04-23 094342](https://github.com/user-attachments/assets/d4865433-a42f-4534-b662-bd8a943168a8)
+---
 
-🤝 Contributing
-Contributions are welcome! If you'd like to:
+## 🔐 Credentials & Default Access
 
-Fix a bug
+You can log in immediately using these pre-seeded credentials:
 
-Improve features
-
-Suggest enhancements
-
-Feel free to fork the repository, open an issue, or submit a pull request.
-
-📣 Connect with Us
-If you found this project useful or interesting:
-
-⭐ Star this repository
-
-🗨️ Leave a comment or feedback
-
-🔁 Share with your network
-
-📝 License
-This project is open-source and available under the MIT License.
-
+* **Administrator / Recruiter**:
+  * **Email**: `admin@example.com`
+  * **Password**: `admin123`
+* **Applicant Candidate**:
+  * **Email**: `user@example.com`
+  * **Password**: `user123`
